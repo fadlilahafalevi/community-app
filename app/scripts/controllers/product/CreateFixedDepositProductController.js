@@ -33,6 +33,7 @@
                 scope.formData.interestCalculationType = data.interestCalculationType.id;
                 scope.formData.interestCalculationDaysInYearType = data.interestCalculationDaysInYearType.id;
                 scope.formData.preClosurePenalInterestOnTypeId = scope.product.preClosurePenalInterestOnTypeOptions[0].id;
+                scope.formData.interestCompoundingType = scope.product.interestCompoundingTypeOptions[1].id;
                 //set chart template
                 scope.chart = scope.product.chartTemplate;
                 scope.chart.chartSlabs = [];

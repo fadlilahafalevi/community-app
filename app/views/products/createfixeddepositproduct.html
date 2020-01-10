@@ -141,21 +141,14 @@
                             <form-validate valattributeform="Terms" valattribute="maxDepositAmount"/>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2">{{ 'label.input.interestcompoundingperiod' | translate
-                            }}<span class="required">*</span>
-                            <i class="fa fa-question-circle"
-                               uib-tooltip="{{'label.tooltip.fixeddepositproduct.compoundperiod' | translate}}"
-                               tooltip-append-to-body="true"></i>
-                        </label>
-                        <div class="col-sm-2">
-                            <select id="interestCompoundingPeriodTypeOptions"
-                                    ng-model="formData.interestCompoundingPeriodType" class="form-control"
-                                    ng-options="type.id as type.value for type in product.interestCompoundingPeriodTypeOptions"
-                                    ng-change="depositproduct.interestCompoundingPeriodOption.value = formValue(product.interestCompoundingPeriodTypeOptions,formData.interestCompoundingPeriodType)"
-                                    value="{{type.id}}">
-                            </select>
-                        </div>
+					<div class="form-group">
+						<label class="control-label col-sm-2">{{'label.input.interestcompoundingtype' | translate }}&nbsp;<span class="required">*</span>
+						</label>
+						<div class="col-sm-2">
+						<select id="interestCompoundingPeriodType" ng-model="formData.interestCompoundingType"
+						 	ng-options="type.id as type.value for type in product.interestCompoundingTypeOptions"
+							value="{{type.id}}" class="form-control"></select>
+						</div>
                         <label class="control-label col-sm-2 col-sm-offset-2">{{ 'label.input.interestpostingperiod' |
                             translate }}<span class="required">*</span>
                             <i class="fa fa-question-circle"
@@ -167,6 +160,22 @@
                                     class="form-control"
                                     ng-options="type.id as type.value for type in product.interestPostingPeriodTypeOptions"
                                     ng-change="depositproduct.interestPostingPeriodOption.value = formValue(product.interestPostingPeriodTypeOptions,formData.interestPostingPeriodType)"
+                                    value="{{type.id}}">
+                            </select>
+                        </div>
+					</div>
+                    <div class="form-group" ng-show="formData.interestCompoundingType == 1">
+                        <label class="control-label col-sm-2">{{ 'label.input.interestcompoundingperiod' | translate
+                            }}<span class="required">*</span>
+                            <i class="fa fa-question-circle"
+                               uib-tooltip="{{'label.tooltip.fixeddepositproduct.compoundperiod' | translate}}"
+                               tooltip-append-to-body="true"></i>
+                        </label>
+                        <div class="col-sm-2">
+                            <select id="interestCompoundingPeriodTypeOptions"
+                                    ng-model="formData.interestCompoundingPeriodType" class="form-control"
+                                    ng-options="type.id as type.value for type in product.interestCompoundingPeriodTypeOptions"
+                                    ng-change="depositproduct.interestCompoundingPeriodOption.value = formValue(product.interestCompoundingPeriodTypeOptions,formData.interestCompoundingPeriodType)"
                                     value="{{type.id}}">
                             </select>
                         </div>

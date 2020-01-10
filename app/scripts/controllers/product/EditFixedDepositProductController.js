@@ -60,7 +60,8 @@
                     maxDepositTermTypeId: maxDepositTermTypeId,
                     inMultiplesOfDepositTerm: data.inMultiplesOfDepositTerm,
                     inMultiplesOfDepositTermTypeId: inMultiplesOfDepositTermTypeId,
-                    withHoldTax: data.withHoldTax == true ? 'true' : 'false'
+                    withHoldTax: data.withHoldTax == true ? 'true' : 'false',
+                    interestCompoundingType: data.interestCompoundingType.id
                 }
 
                 if(data.withHoldTax){

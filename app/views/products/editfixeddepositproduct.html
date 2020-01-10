@@ -100,6 +100,26 @@
     </div>
 </div>
 <div class="form-group">
+	<label class="control-label col-sm-2">{{'label.input.interestcompoundingtype' | translate }}&nbsp;<span class="required">*</span>
+	</label>
+	<div class="col-sm-2">
+	<select id="interestCompoundingPeriodType" ng-model="formData.interestCompoundingType"
+	 	ng-options="type.id as type.value for type in product.interestCompoundingTypeOptions"
+		value="{{type.id}}" class="form-control"></select>
+	</div>
+    <label class="control-label col-sm-2 col-sm-offset-2">{{ 'label.input.interestpostingperiod' | translate }}<span class="required">*</span>
+        <i class="icon-question-sign" tooltip="{{'label.tooltip.fixeddepositproduct.postingperiod' | translate}}"
+           tooltip-append-to-body="true"></i>
+    </label>
+    <div class="col-sm-2">
+        <select id="interestPostingPeriodTypeOptions" ng-model="formData.interestPostingPeriodType"
+                class="form-control"
+                ng-options="type.id as type.value for type in product.interestPostingPeriodTypeOptions"
+                value="{{type.id}}">
+        </select>
+    </div>
+</div>
+<div class="form-group" ng-show="formData.interestCompoundingType == 1">
     <label class="control-label col-sm-2">{{ 'label.input.interestcompoundingperiod' | translate }}<span class="required">*</span>
         <i class="fa fa-question-circle" uib-tooltip="{{'label.tooltip.fixeddepositproduct.compoundperiod' | translate}}"
            tooltip-append-to-body="true"></i>
@@ -108,17 +128,6 @@
         <select id="interestCompoundingPeriodTypeOptions"
                 ng-model="formData.interestCompoundingPeriodType" class="form-control"
                 ng-options="type.id as type.value for type in product.interestCompoundingPeriodTypeOptions"
-                value="{{type.id}}">
-        </select>
-    </div>
-    <label class="control-label col-sm-2 col-sm-offset-2">{{ 'label.input.interestpostingperiod' | translate }}<span class="required">*</span>
-        <i class="fa fa-question-circle" uib-tooltip="{{'label.tooltip.fixeddepositproduct.postingperiod' | translate}}"
-           tooltip-append-to-body="true"></i>
-    </label>
-    <div class="col-sm-2">
-        <select id="interestPostingPeriodTypeOptions" ng-model="formData.interestPostingPeriodType"
-                class="form-control"
-                ng-options="type.id as type.value for type in product.interestPostingPeriodTypeOptions"
                 value="{{type.id}}">
         </select>
     </div>

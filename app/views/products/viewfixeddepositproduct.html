@@ -70,9 +70,13 @@
         <td colspan="3">{{depositproduct.nominalAnnualInterestRate}}</td>
     </tr>-->
     <tr>
-        <td>{{'label.heading.interestcompoundingperiod' | translate}}</td>
-        <td colspan="3">{{depositproduct.interestCompoundingPeriodType.value}}</td>
-    </tr>
+	    <td>{{'label.heading.interestcompoundingtype' | translate}}</td>
+	    <td colspan="3">{{depositproduct.interestCompoundingType.value}}</td>
+	</tr>
+	<tr ng-show="depositproduct.interestCompoundingType.id == 1">
+	    <td>{{'label.heading.interestcompoundingperiod' | translate}}</td>
+	    <td colspan="3">{{depositproduct.interestCompoundingPeriodType.value}}</td>
+	</tr>
     <tr>
         <td>{{'label.heading.interestpostingperiod' | translate}}</td>
         <td colspan="3">{{depositproduct.interestPostingPeriodType.value}}</td>

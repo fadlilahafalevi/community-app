@@ -1925,6 +1925,7 @@
   "label.input.requreddate": "Requested Date",
   "label.input.currencyinmultiplesof": "Currency in multiples of",
   "label.input.interestcompoundingperiod": "Interest compounding period",
+  "label.input.interestcompoundingtype":"Interest Compounding Type",
   "label.input.interestpostingperiod": "Interest posting period",
   "label.input.interestcalculatedusing": "Interest calculated using",
   "label.input.daysinyears": "Days in year",
