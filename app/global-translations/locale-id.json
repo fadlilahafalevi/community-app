@@ -119,6 +119,7 @@
 	"label.heading.provisioningpercentage": "Persentase",
 	"label.heading.provisioningliabilityaccount": "Akun Liabilitas",
 	"label.heading.provisioningexpenseaccount": "Akun Pengeluaran",
+	"label.heading.provisioningassetaccount": "Akun Aset",
 	"label.heading.provisioningamount": "Jumlah Provisi",
 	"label.heading.rateperiods": "Periode Suku Bunga Mengambang",
 	"label.heading.fromdate": "Dari Tanggal",
@@ -1405,6 +1406,7 @@
 	"label.selectsavingsofficer": "pilih petugas tabungan",
 	"label.selectliabilitiaccount": "Pilih akun kewajiban",
 	"label.selectexpenseaccount": "Pilih akun pengeluaran",
+	"label.selectassetaccount": "Pilih akun aset",
 	"label.selectprovisioningcategory": "Pilih kategori",
 	"label.selectfromdate": "Memilih tanggal",
 	"label.selecttodate": "Memilih tanggal",
@@ -3235,5 +3237,10 @@
 	"label.selectsurvey": "pilih survei",
 	"label.input.isDormancyTrackingActive": "Apakah Terdapat pelacakan akun yang tidak aktif",
 	"label.tooltip.isDormancyTrackingActive": "Mengaktifkan pelacakan atas akun nasabah yang tidak aktif",
-	"Aging Detail": "Rincian umur piutang"
+	"Aging Detail": "Rincian umur piutang",
+	
+	"Provisioning Criteria":"..",
+	"error.msg.gap":"Periode kriteria provisioning memiliki gap",
+	"label.heading.collectibilityaccount":"Kolektibilitas Akun",
+	"label.heading.collectibilitycif":"One Obligor"
 }

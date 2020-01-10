@@ -13,7 +13,7 @@
                 scope.template = data;
                 scope.allloanproducts = data.loanProducts ;
                 scope.definitions = data.definitions;
-                scope.liabilityaccounts = data.glAccounts;
+                scope.assetaccounts = data.glAccounts;
                 scope.expenseaccounts = data.glAccounts;
             });
 
