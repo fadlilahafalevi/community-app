@@ -3242,5 +3242,6 @@
 	"Provisioning Criteria":"..",
 	"error.msg.gap":"Periode kriteria provisioning memiliki gap",
 	"label.heading.collectibilityaccount":"Kolektibilitas Akun",
-	"label.heading.collectibilitycif":"One Obligor"
+	"label.heading.collectibilitycif":"One Obligor",
+	"label.heading.reservedamount":"Saldo PPAP"
 }

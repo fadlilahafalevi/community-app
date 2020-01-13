@@ -267,11 +267,15 @@
                             <th class="table-bold-loan">{{'label.heading.disburseamount' | translate}}</th>
                             <td><span class="padded-td">{{loandetails.principal | number}}</span></td>
                         </tr>
-                        <tr>
+                        <tr ng-show="loandetails.status.id == '300'">
+                            <th class="table-bold-loan">{{'label.heading.reservedamount' | translate}}</th>
+                            <td><span class="padded-td">{{loandetails.reservedAmount | number}}</span></td>
+                        </tr>
+                        <tr ng-show="loandetails.status.id == '300'">
                             <th class="table-bold-loan">{{'label.heading.collectibilityaccount' | translate}}</th>
                             <td><span class="padded-td">{{loandetails.categoryByLoan}} - {{loandetails.categoryNameByLoan}}</td>
                         </tr>
-                        <tr>
+                        <tr ng-show="loandetails.status.id == '300'">
                             <th class="table-bold-loan">{{'label.heading.collectibilitycif' | translate}}</th>
                             <td><span class="padded-td">{{loandetails.categoryByCif}} - {{loandetails.categoryNameByCif}}</span></td>
                         </tr>

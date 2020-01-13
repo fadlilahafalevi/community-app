@@ -132,6 +132,7 @@
   "label.heading.reset": "Reset",
   "label.input.indays": "In Days",
   "label.input.liabilityaccount": "Liability Account (CR)",
+  "label.input.assetaccount": "Asset Account (CR)",
   "label.input.expenseaccount": "Expense Account (DR)",
   "label.input.minfloatinginterestrate": "Minimum Interest Rate",
   "label.input.defaultfloatinginterestrate": "Default Interest Rate",
@@ -4262,5 +4263,6 @@
   "error.msg.gap":"Period range has gap for provisioning criteria",
   "label.heading.collectibilityaccount":"Collectibility Account",
   "label.heading.collectibilitycif":"One Obligor",
+  "label.heading.reservedamount":"Reserved Amount",
   "----End---": "--End of file--- "
 }

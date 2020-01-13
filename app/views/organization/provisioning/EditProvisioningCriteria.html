@@ -90,7 +90,7 @@
                             <ng-form name="assetaccount{{$index}}">
                                 <select id="assetaccount" name="assetaccount"
                                         ng-model="provisioningcategory.assetAccount"
-                                        ng-options="assetaccount.id as assetaccount.name for assetaccount in assetaccounts"
+                                        ng-options="assetaccount.id as assetaccount.name for assetaccount in assetaccounts | filter: {type: {code: 'accountType.asset'}}"
                                         value="{{assetaccount.id}}" class="form-control" required>
                                     <option value="">{{'label.selectassetaccount' | translate}}</option>
                                 </select>
@@ -103,7 +103,7 @@
                             <ng-form name="expenseaccount{{$index}}">
                                 <select id="expenseaccount" name="expenseaccount"
                                         ng-model="provisioningcategory.expenseAccount"
-                                        ng-options="liabilitaccont.id as liabilitaccont.name for liabilitaccont in expenseaccounts"
+                                        ng-options="liabilitaccont.id as liabilitaccont.name for liabilitaccont in expenseaccounts | filter: {type: {code: 'accountType.expense'}}"
                                         value="{{liabilitaccont.id}}" class="form-control" required>
                                     <option value="">{{'label.selectexpenseaccount' | translate}}</option>
                                 </select>

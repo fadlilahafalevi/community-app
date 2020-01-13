@@ -46,19 +46,21 @@
                         <tr class="graybg">
                             <th>{{'label.heading.officeName' | translate}}</th>
                             <th>{{'label.heading.productname' | translate}}</th>
+                            <th>{{'label.heading.loanaccount' | translate}}</th>
                             <th>{{'label.heading.currencycode' | translate}}</th>
                             <th>{{'label.heading.categoryname' | translate}}</th>
                             <th>{{'label.heading.provisioningamount' | translate}}</th>
-                            <th>{{'label.input.liabilityaccount' | translate}}</th>
+                            <th>{{'label.input.assetaccount' | translate}}</th>
                             <th>{{'label.input.expenseaccount' | translate}}</th>
                         </tr>
                         <tr ng-repeat="provisioningentry in transactions.currentPageItems">
                             <td>{{provisioningentry.officeName}}</td>
                             <td>{{provisioningentry.productName}}</td>
+                            <td>{{provisioningentry.loanAccountNumber}}</td>
                             <td>{{provisioningentry.currencyCode}}</td>
                             <td>{{provisioningentry.categoryName}}</td>
-                            <td>{{provisioningentry.amountreserved | number}}</td>
-                            <td>{{provisioningentry.liabilityAccountName}}</td>
+                            <td>{{provisioningentry.amountReservedByCif | number}}</td>
+                            <td>{{provisioningentry.assetAccountName}}</td>
                             <td>{{provisioningentry.expenseAccountName}}</td>
                         </tr>
                     </table>
