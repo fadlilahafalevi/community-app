@@ -58,6 +58,7 @@
                     scope.formData.lockinPeriodFrequency = data.lockinPeriodFrequency;
                     scope.formData.withHoldTax = data.withHoldTax;
 
+                    if (data.interestCompoundingType) scope.formData.interestCompoundingType = data.interestCompoundingType.id;
                     if (data.interestCompoundingPeriodType) scope.formData.interestCompoundingPeriodType = data.interestCompoundingPeriodType.id;
                     if (data.interestPostingPeriodType) scope.formData.interestPostingPeriodType = data.interestPostingPeriodType.id;
                     if (data.interestCalculationType) scope.formData.interestCalculationType = data.interestCalculationType.id;

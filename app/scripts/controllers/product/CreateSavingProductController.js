@@ -19,6 +19,8 @@
                 scope.incomeAccountOptions = scope.product.accountingMappingOptions.incomeAccountOptions || [];
                 scope.expenseAccountOptions = scope.product.accountingMappingOptions.expenseAccountOptions || [];
 
+                scope.formData.interestCompoundingType = data.interestCompoundingTypeOptions[1].id;
+                console.log(data.interestCompoundingTypeOptions);
                 scope.formData.currencyCode = data.currencyOptions[0].code;
                 scope.formData.digitsAfterDecimal = data.currencyOptions[0].decimalPlaces;
                 scope.formData.interestCompoundingPeriodType = data.interestCompoundingPeriodType.id;

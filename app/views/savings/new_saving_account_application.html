@@ -110,6 +110,27 @@
                         <div class="col-sm-2">
                             <form-validate valattributeform="Terms" valattribute="nominalannualinterestrate" />
                         </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">{{ 'label.input.interestcompoundingtype' | translate }}&nbsp;
+                            <span class="required">*</span>
+                        </label>
+                        <div class="col-sm-2">
+                            <select id="interestCompoundingType" ng-model="formData.interestCompoundingType"
+                            ng-options="type.id as type.value for type in data.interestCompoundingTypeOptions"
+                                value="{{type.id}}" class="form-control width170px"></select>
+                        </div>
+                        <label class="control-label col-sm-2 col-sm-offset-2">{{ 'label.input.interestpostingperiod' | translate }}&nbsp;
+                            <span class="required">*</span>
+                        </label>
+                        <div class="col-sm-2">
+                            <select id="interestPostingPeriodType" ng-model="formData.interestPostingPeriodType" ng-options="type.id as type.value for type in data.interestPostingPeriodTypeOptions"
+                                ng-change="savingdetails.interestPostingPeriodTypeValue = formValue(data.interestPostingPeriodTypeOptions,formData.interestPostingPeriodType)"
+                                value="{{type.id}}" class="form-control width170px">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-show="formData.interestCompoundingType == 1">
                         <label class="control-label col-sm-2">{{ 'label.input.interestcompoundingperiod' | translate }}&nbsp;
                             <span class="required">*</span>
                         </label>
@@ -123,16 +144,6 @@
                         <label class="control-label col-sm-2">{{ 'label.input.currencyinmultiplesof' | translate }}&nbsp;</label>
                         <div class="col-sm-2">
                             <input type="text" value="{{data.currency.inMultiplesOf}}" class="form-control" readonly/>
-                        </div>
-
-                        <label class="control-label col-sm-2 col-sm-offset-2">{{ 'label.input.interestpostingperiod' | translate }}&nbsp;
-                            <span class="required">*</span>
-                        </label>
-                        <div class="col-sm-2">
-                            <select id="interestPostingPeriodType" ng-model="formData.interestPostingPeriodType" ng-options="type.id as type.value for type in data.interestPostingPeriodTypeOptions"
-                                ng-change="savingdetails.interestPostingPeriodTypeValue = formValue(data.interestPostingPeriodTypeOptions,formData.interestPostingPeriodType)"
-                                value="{{type.id}}" class="form-control width170px">
-                            </select>
                         </div>
                     </div>
                     <div class="form-group">
