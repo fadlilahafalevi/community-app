@@ -40,7 +40,7 @@
                         <th>{{'label.heading.minimumage' | translate}}</th>
                         <th>{{'label.heading.maximumage' | translate}}</th>
                         <th>{{'label.heading.provisioningpercentage' | translate}}</th>
-                        <th>{{'label.heading.provisioningliabilityaccount' | translate}}</th>
+                        <th>{{'label.heading.provisioningassetaccount' | translate}}</th>
                         <th>{{'label.heading.provisioningexpenseaccount' | translate}}</th>
                     </tr>
                     <tr ng-repeat="provisioningcategory in definitions | orderBy:'categoryId'">
@@ -48,7 +48,7 @@
                         <td>{{provisioningcategory.minAge}}</td>
                         <td>{{provisioningcategory.maxAge}}</td>
                         <td>{{provisioningcategory.provisioningPercentage}}</td>
-                        <td>{{provisioningcategory.liabilityName}}</td>
+                        <td>{{provisioningcategory.assetName}}</td>
                         <td>{{provisioningcategory.expenseName}}</td>
                     </tr>
                 </table>

@@ -13,7 +13,7 @@
                 scope.definitions = data.definitions;
                 scope.criteriaName = data.criteriaName;
                 scope.criteriaId = data.criteriaId;
-                scope.liabilityaccounts = data.glAccounts;
+                scope.assetaccounts = data.glAccounts;
                 scope.expenseaccounts = data.glAccounts;
             });
 
