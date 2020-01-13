@@ -57,6 +57,7 @@
                 scope.formData.enforceMinRequiredBalance = data.enforceMinRequiredBalance;
                 scope.formData.minRequiredBalance = data.minRequiredBalance;
                 scope.formData.withHoldTax = data.withHoldTax;
+                scope.formData.interestCompoundingType = data.interestCompoundingType.id;
 
                 if (data.interestCompoundingPeriodType) scope.formData.interestCompoundingPeriodType = data.interestCompoundingPeriodType.id;
                 if (data.interestPostingPeriodType) scope.formData.interestPostingPeriodType = data.interestPostingPeriodType.id;

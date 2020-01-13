@@ -64,15 +64,15 @@
                 </td>
             </tr>
             <tr>
-                <td class="width14"><label class="control-label">{{ 'label.input.interestcompoundingperiod' | translate
-                    }}&nbsp;<span class="required">*</span></label>
-                </td>
-                <td class="width36 paddedbottom10">
-                    <select id="interestCompoundingPeriodType"
-                            ng-model="formData.interestCompoundingPeriodType"
-                            ng-options="type.id as type.value for type in data.interestCompoundingPeriodTypeOptions"
-                            value="{{type.id}}" class="form-control width170px"></select>
-                </td>
+				<td class="width14"><label class="control-label">{{ 'label.input.interestcompoundingtype' | translate
+					}}&nbsp;<span class="required">*</span>
+				</label></td>
+				<td class="width36 paddedbottom10">
+					<select id="interestCompoundingType"
+					ng-model="formData.interestCompoundingType"
+					ng-options="type.id as type.value for type in data.interestCompoundingTypeOptions"
+					value="{{type.id}}" class="form-control width170px"></select>
+				</td>
                 <td class="width14"><label class="control-label">{{ 'label.input.interestpostingperiod' | translate
                     }}&nbsp;<span
                             class="required">*</span></label></td>
@@ -82,6 +82,17 @@
                             ng-options="type.id as type.value for type in data.interestPostingPeriodTypeOptions"
                             value="{{type.id}}" class="form-control width170px">
                     </select></td>
+			</tr>
+            <tr ng-show="formData.interestCompoundingType == 1">
+                <td class="width14"><label class="control-label">{{ 'label.input.interestcompoundingperiod' | translate
+                    }}&nbsp;<span class="required">*</span></label>
+                </td>
+                <td class="width36 paddedbottom10">
+                    <select id="interestCompoundingPeriodType"
+                            ng-model="formData.interestCompoundingPeriodType"
+                            ng-options="type.id as type.value for type in data.interestCompoundingPeriodTypeOptions"
+                            value="{{type.id}}" class="form-control width170px"></select>
+                </td>
             </tr>
             <tr>
                 <td class="width14"><label class="control-label">{{ 'label.input.interestcalculatedusing' | translate

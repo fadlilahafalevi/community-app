@@ -43,7 +43,8 @@
                     isDormancyTrackingActive: data.isDormancyTrackingActive == true ? 'true':'false',
                     daysToInactive: data.daysToInactive,
                     daysToDormancy: data.daysToDormancy,
-                    daysToEscheat: data.daysToEscheat
+                    daysToEscheat: data.daysToEscheat,
+                    interestCompoundingType: data.interestCompoundingType.id
                 }
 
                 if(data.withHoldTax){

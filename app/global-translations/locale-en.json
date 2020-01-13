@@ -1884,6 +1884,7 @@
   "label.heading.rejectsharespurchase": "Reject Shares Purchase Request",
   "label.heading.initiatedividend": "Initiate Dividend",
   "label.heading.closeshareaccount": "Close Share Account",
+  "label.heading.interestcompoundingtype":"Interest Compounding Type",
   "#Anchors": "..",
   "label.anchor.addsavingcharges": "Add Saving Charges",
   "label.anchor.viewsavingaccount": "View Saving Account",

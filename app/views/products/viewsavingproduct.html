@@ -51,10 +51,14 @@
             <td>{{'label.heading.nominalannualinterestrate' | translate}}</td>
             <td colspan="3">{{savingproduct.nominalAnnualInterestRate}}</td>
         </tr>
-        <tr>
-            <td>{{'label.heading.interestcompoundingperiod' | translate}}</td>
-            <td colspan="3">{{savingproduct.interestCompoundingPeriodType.value}}</td>
-        </tr>
+	    <tr>
+		    <td>{{'label.heading.interestcompoundingtype' | translate}}</td>
+		    <td colspan="3">{{savingproduct.interestCompoundingType.value}}</td>
+		</tr>
+		<tr ng-show="depositproduct.interestCompoundingType.id == 1">
+		    <td>{{'label.heading.interestcompoundingperiod' | translate}}</td>
+		    <td colspan="3">{{savingproduct.interestCompoundingPeriodType.value}}</td>
+		</tr>
         <tr>
             <td>{{'label.heading.interestpostingperiod' | translate}}</td>
             <td colspan="3">{{savingproduct.interestPostingPeriodType.value}}</td>
