@@ -441,7 +441,8 @@
 	                            <select id="configureFundOptions[{{$index}}].fundSourceAccountId"
 	                                    class="form-control width170px"
 	                                    ng-model="configureFundOption.fundSourceAccountId"
-	                                    ng-options="assetAccount.id as assetAccount.name for assetAccount in configureFundOption.assetAccountOptions"
+	                                    chosen="assetAccountOptions"
+	                                    ng-options="assetAccount.id as assetAccount.type.value + ' - ' + assetAccount.name for assetAccount in configureFundOption.assetAccountOptions"
 	                                    value="{{assetAccount.id}}">
 	                            </select>
 	                        </td>
