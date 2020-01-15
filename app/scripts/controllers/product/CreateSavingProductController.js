@@ -9,6 +9,7 @@
             scope.specificIncomeaccounts = [];
             scope.penaltySpecificIncomeaccounts = [];
             scope.configureFundOption = {};
+            scope.allGlAccountOptions = [];
             scope.isClicked = false;
 
             resourceFactory.savingProductResource.get({resourceType: 'template'}, function (data) {
@@ -18,9 +19,25 @@
                 scope.liabilityAccountOptions = scope.product.accountingMappingOptions.liabilityAccountOptions || [];
                 scope.incomeAccountOptions = scope.product.accountingMappingOptions.incomeAccountOptions || [];
                 scope.expenseAccountOptions = scope.product.accountingMappingOptions.expenseAccountOptions || [];
+                scope.equityAccountOptions = scope.product.accountingMappingOptions.equityAccountOptions || [];
+                
+                for (var i in scope.assetAccountOptions) {
+                	scope.allGlAccountOptions.push(scope.assetAccountOptions[i]);
+                }
+                for (var i in scope.liabilityAccountOptions) {
+                	scope.allGlAccountOptions.push(scope.liabilityAccountOptions[i]);
+                }
+                for (var i in scope.incomeAccountOptions) {
+                	scope.allGlAccountOptions.push(scope.incomeAccountOptions[i]);
+                }
+                for (var i in scope.expenseAccountOptions) {
+                	scope.allGlAccountOptions.push(scope.expenseAccountOptions[i]);
+                }
+                for (var i in scope.equityAccountOptions) {
+                	scope.allGlAccountOptions.push(scope.equityAccountOptions[i]);
+                }
 
                 scope.formData.interestCompoundingType = data.interestCompoundingTypeOptions[1].id;
-                console.log(data.interestCompoundingTypeOptions);
                 scope.formData.currencyCode = data.currencyOptions[0].code;
                 scope.formData.digitsAfterDecimal = data.currencyOptions[0].decimalPlaces;
                 scope.formData.interestCompoundingPeriodType = data.interestCompoundingPeriodType.id;
@@ -85,7 +102,7 @@
                         paymentTypeId: scope.product.paymentTypeOptions[0].id,
                         fundSourceAccountId: scope.assetAccountOptions[0].id,
                         paymentTypeOptions: scope.product.paymentTypeOptions,
-                        assetAccountOptions: scope.assetAccountOptions
+                        assetAccountOptions: scope.allGlAccountOptions
                     });
                 }
                 ;
