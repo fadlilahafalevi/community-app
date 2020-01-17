@@ -8,6 +8,8 @@
             scope.specificIncomeaccounts = [];
             scope.penaltySpecificIncomeaccounts = [];
             scope.configureFundOption = {};
+            scope.allGlAccountOptions = [];
+            
 
             resourceFactory.savingProductResource.get({savingProductId: routeParams.id, template: 'true'}, function (data) {
                 scope.product = data;
@@ -16,6 +18,23 @@
                 scope.liabilityAccountOptions = scope.product.accountingMappingOptions.liabilityAccountOptions || [];
                 scope.incomeAccountOptions = scope.product.accountingMappingOptions.incomeAccountOptions || [];
                 scope.expenseAccountOptions = scope.product.accountingMappingOptions.expenseAccountOptions || [];
+                scope.equityAccountOptions = scope.product.accountingMappingOptions.equityAccountOptions || [];
+                
+                for (var i in scope.assetAccountOptions) {
+                	scope.allGlAccountOptions.push(scope.assetAccountOptions[i]);
+                }
+                for (var i in scope.liabilityAccountOptions) {
+                	scope.allGlAccountOptions.push(scope.liabilityAccountOptions[i]);
+                }
+                for (var i in scope.incomeAccountOptions) {
+                	scope.allGlAccountOptions.push(scope.incomeAccountOptions[i]);
+                }
+                for (var i in scope.expenseAccountOptions) {
+                	scope.allGlAccountOptions.push(scope.expenseAccountOptions[i]);
+                }
+                for (var i in scope.equityAccountOptions) {
+                	scope.allGlAccountOptions.push(scope.equityAccountOptions[i]);
+                }
                 scope.formData = {
                     name: data.name,
                     shortName: data.shortName,
@@ -44,7 +63,7 @@
                     daysToInactive: data.daysToInactive,
                     daysToDormancy: data.daysToDormancy,
                     daysToEscheat: data.daysToEscheat,
-                    interestCompoundingType: data.interestCompoundingType.id
+                    interestCompoundingType: data.interestCompoundingType.id != undefined ? data.interestCompoundingType.id:1
                 }
 
                 if(data.withHoldTax){
@@ -56,9 +75,12 @@
                 }
 
                 scope.formData.savingsReferenceAccountId = data.accountingMappings.savingsReferenceAccount.id;
+                scope.formData.overdraftPortfolioControlId = data.accountingMappings.overdraftPortfolioControl.id;
                 scope.formData.savingsControlAccountId = data.accountingMappings.savingsControlAccount.id;
                 scope.formData.transfersInSuspenseAccountId = data.accountingMappings.transfersInSuspenseAccount.id;
-                scope.formData.escheatLiabilityId = data.accountingMappings.escheatLiabilityAccount.id;
+                if (data.accountingMappings.escheatLiabilityAccount != undefined) {
+                    scope.formData.escheatLiabilityId = data.accountingMappings.escheatLiabilityAccount.id;
+                }
                 scope.formData.incomeFromFeeAccountId = data.accountingMappings.incomeFromFeeAccount.id;
                 scope.formData.incomeFromPenaltyAccountId = data.accountingMappings.incomeFromPenaltyAccount.id;
                 scope.formData.interestOnSavingsAccountId = data.accountingMappings.interestOnSavingsAccount.id;
@@ -71,7 +93,7 @@
                         paymentTypeId: fundSource.paymentType.id,
                         fundSourceAccountId: fundSource.fundSourceAccount.id,
                         paymentTypeOptions: scope.product.paymentTypeOptions,
-                        assetAccountOptions: scope.assetAccountOptions
+                        assetAccountOptions: scope.allGlAccountOptions
                     })
                 });
 
@@ -128,7 +150,7 @@
                         paymentTypeId: scope.product.paymentTypeOptions[0].id,
                         fundSourceAccountId: scope.assetAccountOptions[0].id,
                         paymentTypeOptions: scope.product.paymentTypeOptions,
-                        assetAccountOptions: scope.assetAccountOptions
+                        assetAccountOptions: scope.allGlAccountOptions
                     });
                 }
             }
