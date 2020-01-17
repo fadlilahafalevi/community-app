@@ -191,12 +191,7 @@
                 if (scope.formData.accountingRule == 2 || scope.formData.accountingRule == 3 || scope.formData.accountingRule == 4) {
                     scope.formData.fundSourceAccountId = scope.product.accountingMappings.fundSourceAccount.id;
                     scope.formData.loanPortfolioAccountId = scope.product.accountingMappings.loanPortfolioAccount.id;
-                    if (scope.formData.accountingRule == 3 || scope.formData.accountingRule == 4) {
-                        scope.formData.receivableInterestAccountId = scope.product.accountingMappings.receivableInterestAccount.id;
-                        scope.formData.receivableFeeAccountId = scope.product.accountingMappings.receivableFeeAccount.id;
-                        scope.formData.receivablePenaltyAccountId = scope.product.accountingMappings.receivablePenaltyAccount.id;
-                    }
-
+                    
                     scope.formData.transfersInSuspenseAccountId = scope.product.accountingMappings.transfersInSuspenseAccount.id;
                     scope.formData.interestOnLoanAccountId = scope.product.accountingMappings.interestOnLoanAccount.id;
                     scope.formData.incomeFromFeeAccountId = scope.product.accountingMappings.incomeFromFeeAccount.id;
@@ -204,6 +199,13 @@
                     scope.formData.incomeFromRecoveryAccountId = scope.product.accountingMappings.incomeFromRecoveryAccount.id;
                     scope.formData.writeOffAccountId = scope.product.accountingMappings.writeOffAccount.id;
                     scope.formData.overpaymentLiabilityAccountId = scope.product.accountingMappings.overpaymentLiabilityAccount.id;
+                    
+                    if (scope.formData.accountingRule == 3 || scope.formData.accountingRule == 4) {
+                        scope.formData.receivableInterestAccountId = scope.product.accountingMappings.receivableInterestAccount.id;
+                        scope.formData.receivableFeeAccountId = scope.product.accountingMappings.receivableFeeAccount.id;
+                        scope.formData.receivablePenaltyAccountId = scope.product.accountingMappings.receivablePenaltyAccount.id;
+                        scope.formData.accruedInterestAssetId = scope.product.accountingMappings.accruedInterestAsset.id;
+                    }
 
                     _.each(scope.product.paymentChannelToFundSourceMappings, function (fundSource) {
                         scope.configureFundOptions.push({

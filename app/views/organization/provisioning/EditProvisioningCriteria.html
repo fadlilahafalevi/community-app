@@ -52,9 +52,9 @@
                         <th>{{'label.heading.provisioningcategory' | translate}}</th>
                         <th>{{'label.heading.minimumage' | translate}}</th>
                         <th>{{'label.heading.maximumage' | translate}}</th>
-                        <th>{{'label.heading.isNPL' | translate}}</th>
                         <th>{{'label.heading.provisioningpercentage' | translate}}</th>
-                        <th>{{'label.heading.provisioningliabilityaccount' | translate}}</th>
+                        <th>{{'label.heading.isNPL' | translate}}</th>
+                        <th>{{'label.heading.provisioningassetaccount' | translate}}</th>
                         <th>{{'label.heading.provisioningexpenseaccount' | translate}}</th>
                     </tr>
                     <tr ng-repeat="provisioningcategory in definitions | orderBy:'categoryId'">
@@ -90,21 +90,20 @@
                         <td>
 	                        <ng-form name="isNPL{{$index}}">
 	                            <input id="isNPL" name="isNPL" type="checkbox"
-	                                   ng-model="provisioningcategory.isNPL" required ng-change="checklist($index)"/>
-	                            <span class="error" ng-show="visitValidation&&isNPL{{$index}}.isNPL.$error.required">{{ 'label.requirefield' | translate }}</span>
+	                                   ng-model="provisioningcategory.isNPL" ng-change="checklist($index)"/>
 	                        </ng-form>
 	                    </td>
 
                         <td>
-                            <ng-form name="liabilityaccount{{$index}}">
-                                <select id="liabilitaccont" name="liabilitaccont"
-                                        ng-model="provisioningcategory.liabilityAccount"
-                                        ng-options="liabilitaccont.id as liabilitaccont.name for liabilitaccont in liabilityaccounts"
-                                        value="{{liabilitaccont.id}}" class="form-control" required>
-                                    <option value="">{{'label.selectliabilitiaccount' | translate}}</option>
+                            <ng-form name="assetaccount{{$index}}">
+                                <select id="assetaccount" name="assetaccount"
+                                        ng-model="provisioningcategory.assetAccount"
+                                        ng-options="assetaccount.id as assetaccount.name for assetaccount in assetaccounts | filter: {type: {code: 'accountType.asset'}}"
+                                        value="{{assetaccount.id}}" class="form-control" required>
+                                    <option value="">{{'label.selectassetaccount' | translate}}</option>
                                 </select>
                                 <span class="error"
-                                      ng-show="visitValidation&&liabilityaccount{{$index}}.liabilitaccont.$error.required">{{ 'label.requirefield' | translate }}</span>
+                                      ng-show="visitValidation&&assetaccount{{$index}}.assetaccount.$error.required">{{ 'label.requirefield' | translate }}</span>
                             </ng-form>
                         </td>
 
@@ -112,7 +111,7 @@
                             <ng-form name="expenseaccount{{$index}}">
                                 <select id="expenseaccount" name="expenseaccount"
                                         ng-model="provisioningcategory.expenseAccount"
-                                        ng-options="liabilitaccont.id as liabilitaccont.name for liabilitaccont in expenseaccounts"
+                                        ng-options="liabilitaccont.id as liabilitaccont.name for liabilitaccont in expenseaccounts | filter: {type: {code: 'accountType.expense'}}"
                                         value="{{liabilitaccont.id}}" class="form-control" required>
                                     <option value="">{{'label.selectexpenseaccount' | translate}}</option>
                                 </select>

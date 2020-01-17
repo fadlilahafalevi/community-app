@@ -624,8 +624,9 @@
                                     <td class="width30">
                                         <select id="configureFundOptions[{{$index}}].fundSourceAccountId"
                                                 class="form-control"
+                                                chosen="assetAccountOptions"
                                                 ng-model="configureFundOption.fundSourceAccountId"
-                                                ng-options="assetAccount.id as assetAccount.name for assetAccount in configureFundOption.assetAccountOptions"
+                                                ng-options="assetAccount.id as assetAccount.type.value + ' - ' + assetAccount.name for assetAccount in configureFundOption.assetAccountOptions"
                                                 ng-change="savingproduct.paymentChannelToFundSourceMappings[$index].fundSourceAccount.name = formValue(configureFundOption.assetAccountOptions,configureFundOption.fundSourceAccountId,'id','name')"
                                                 value="{{assetAccount.id}}">
                                         </select>

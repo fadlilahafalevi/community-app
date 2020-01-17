@@ -105,6 +105,7 @@
   "label.heading.maximumage": "Max Age",
   "label.heading.provisioningpercentage": "Percentage",
   "label.heading.provisioningliabilityaccount": "Liability Account",
+  "label.heading.provisioningassetaccount": "Asset Account",
   "label.heading.provisioningexpenseaccount": "Expense Account",
   "label.heading.provisioningamount": "Provisioning Amount",
   "label.heading.rateperiods": "Floating Rate Periods",
@@ -131,6 +132,7 @@
   "label.heading.reset": "Reset",
   "label.input.indays": "In Days",
   "label.input.liabilityaccount": "Liability Account (CR)",
+  "label.input.assetaccount": "Asset Account (CR)",
   "label.input.expenseaccount": "Expense Account (DR)",
   "label.input.minfloatinginterestrate": "Minimum Interest Rate",
   "label.input.defaultfloatinginterestrate": "Default Interest Rate",
@@ -1515,6 +1517,7 @@
   "label.selectliabilitiaccount": "Select liability account",
   "label.selectfloatingrateoption": "Select Floating Rate",
   "label.selectexpenseaccount": "Select expense account",
+  "label.selectassetaccount": "Select asset account",
   "label.selectprovisioningcategory": "Select Category",
   "label.selectfromdate": "Select From Date",
   "label.selecttodate": "Select To Date",
@@ -4258,8 +4261,17 @@
   "reportRunFrequency.custom": "Custom",
   "label.heading.activate.group": "Activate Group",
   
-  "Loan Accrual":"..",
-  "label.heading.isnpl":"is NPL?",
+  "Provisioning Criteria & Collectibility":"..",
+  "error.msg.gap":"Period range has gap for provisioning criteria",
+  "label.heading.collectibilityaccount":"Collectibility Account",
+  "label.heading.collectibilitycif":"One Obligor",
+  "label.heading.reservedamount":"Reserved Amount",
   
+  "Loan Accrual":"..",
+  "label.heading.isNPL":"is NPL?",
+  "label.input.accruedinterestasset":"Accrued Loan Interest (Asset)",
+  "label.tooltip.accruedinterestasset":"An asset account that is debited when the interest is accrued but unpaid by customer",
+  "label.heading.accruedInterestAsset":"Accrued Loan Interest (Asset)",
+	
   "----End---": "--End of file--- "
 }

@@ -470,6 +470,10 @@
                 <td>{{'label.heading.receivablepenalties' | translate}}:</td>
                 <td colspan="3">{{loanproduct.accountingMappings.receivablePenaltyAccount.name}}</td>
             </tr>
+            <tr ng-show="isAccrualAccountingEnabled">
+                <td>{{'label.heading.accruedInterestAsset' | translate}}:</td>
+                <td colspan="3">{{loanproduct.accountingMappings.accruedInterestAsset.name}}</td>
+            </tr>
             <tr>
                 <td>{{'label.heading.transfersinsuspenpense' | translate}}:</td>
                 <td colspan="3">{{loanproduct.accountingMappings.transfersInSuspenseAccount.name}}</td>
