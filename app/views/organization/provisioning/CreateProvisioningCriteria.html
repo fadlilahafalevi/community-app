@@ -53,6 +53,7 @@
                         <th>{{'label.heading.provisioningcategory' | translate}}</th>
                         <th>{{'label.heading.minimumage' | translate}}</th>
                         <th>{{'label.heading.maximumage' | translate}}</th>
+                        <th>{{'label.heading.isNPL' | translate}}</th>
                         <th>{{'label.heading.provisioningpercentage' | translate}}</th>
                         <th>{{'label.heading.provisioningliabilityaccount' | translate}}</th>
                         <th>{{'label.heading.provisioningexpenseaccount' | translate}}</th>
@@ -87,6 +88,14 @@
                                       ng-show="visitValidation&&percentage{{$index}}.percentage.$error.required">{{ 'label.requirefield' | translate }}</span>
                             </ng-form>
                         </td>
+                        
+                        <td>
+	                        <ng-form name="isNPL{{$index}}">
+	                            <input id="isNPL" name="isNPL" type="checkbox"
+	                                   ng-model="provisioningcategory.isNPL" required ng-change="checklist($index)"/>
+	                            <span class="error" ng-show="visitValidation&&isNPL{{$index}}.isNPL.$error.required">{{ 'label.requirefield' | translate }}</span>
+	                        </ng-form>
+	                    </td>
 
                         <td>
                             <ng-form name="liabilityaccount{{$index}}">

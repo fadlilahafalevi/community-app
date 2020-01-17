@@ -3235,5 +3235,8 @@
 	"label.selectsurvey": "pilih survei",
 	"label.input.isDormancyTrackingActive": "Apakah Terdapat pelacakan akun yang tidak aktif",
 	"label.tooltip.isDormancyTrackingActive": "Mengaktifkan pelacakan atas akun nasabah yang tidak aktif",
-	"Aging Detail": "Rincian umur piutang"
+	"Aging Detail": "Rincian umur piutang",
+	
+	"Loan Accrual":"..",
+	"label.heading.isnpl":"is NPL?"
 }

@@ -4257,5 +4257,9 @@
   "reportRunFrequency.yearly": "Yearly",
   "reportRunFrequency.custom": "Custom",
   "label.heading.activate.group": "Activate Group",
+  
+  "Loan Accrual":"..",
+  "label.heading.isnpl":"is NPL?",
+  
   "----End---": "--End of file--- "
 }
