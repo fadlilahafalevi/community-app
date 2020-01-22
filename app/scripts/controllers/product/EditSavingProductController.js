@@ -78,6 +78,9 @@
                 scope.formData.overdraftPortfolioControlId = data.accountingMappings.overdraftPortfolioControl.id;
                 scope.formData.savingsControlAccountId = data.accountingMappings.savingsControlAccount.id;
                 scope.formData.transfersInSuspenseAccountId = data.accountingMappings.transfersInSuspenseAccount.id;
+                if (data.accountingMappings.savingsAccrualAccount != undefined) {
+                	scope.formData.savingsAccrualAccountId = data.accountingMappings.savingsAccrualAccount.id;
+                }
                 if (data.accountingMappings.escheatLiabilityAccount != undefined) {
                     scope.formData.escheatLiabilityId = data.accountingMappings.escheatLiabilityAccount.id;
                 }

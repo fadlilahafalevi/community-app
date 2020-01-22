@@ -95,6 +95,9 @@
                     scope.formData.incomeFromFeeAccountId = data.accountingMappings.incomeFromFeeAccount.id;
                     scope.formData.incomeFromPenaltyAccountId = data.accountingMappings.incomeFromPenaltyAccount.id;
                     scope.formData.interestOnSavingsAccountId = data.accountingMappings.interestOnSavingsAccount.id;
+                    if (data.accountingMappings.savingsAccrualAccount != undefined) {
+                    	scope.formData.savingsAccrualAccountId = data.accountingMappings.savingsAccrualAccount.id;
+                    }
 
                     _.each(scope.product.paymentChannelToFundSourceMappings, function (fundSource) {
                         scope.configureFundOptions.push({
