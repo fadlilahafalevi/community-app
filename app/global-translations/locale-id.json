@@ -3243,5 +3243,11 @@
 	"error.msg.gap":"Periode kriteria provisioning memiliki gap",
 	"label.heading.collectibilityaccount":"Kolektibilitas Akun",
 	"label.heading.collectibilitycif":"One Obligor",
-	"label.heading.reservedamount":"Saldo PPAP"
+	"label.heading.reservedamount":"Saldo PPAP",
+	
+	"Loan Accrual":"..",
+	"label.heading.isNPL":"is NPL?",
+	"label.input.accruedinterestasset":"Tagihan Bunga dalam Penyelesaian (Aset)",
+	"label.tooltip.accruedinterestasset":"Akun aset yang berisi tagihan bunga yang sudah diakui tetapi belum dibayar.",
+	"label.heading.accruedInterestAsset":"Tagihan Bunga dalam Penyelesaian (Aset)"
 }

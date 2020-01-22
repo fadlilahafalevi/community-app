@@ -1329,6 +1329,18 @@
                                 value="{{assetAccount.id}}">
                         </select>
                     </div>
+                    
+                    <label class="control-label col-sm-2">{{ 'label.input.accruedinterestasset' | translate }}</label>
+                    <i class="fa fa-question-circle col-sm-1 "
+                       uib-tooltip="{{'label.tooltip.raccruedinterestasset' | translate}}"></i></a>
+                    <div class="col-sm-3">
+                        <select id="accruedInterestAssetId" ng-model="formData.accruedInterestAssetId"
+                                chosen="assetAccountOptions"
+                                ng-options="assetAccount.id as assetAccount.name for assetAccount in assetAccountOptions"
+                                ng-change = "loanproduct.accountingMappings.accruedInterestAsset.name = formValue(assetAccountOptions,formData.accruedInterestAssetId,'id','name')"
+                                value="{{assetAccount.id}}">
+                        </select>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-sm-2">{{ 'label.input.transfersinsuspense' | translate }}</label>

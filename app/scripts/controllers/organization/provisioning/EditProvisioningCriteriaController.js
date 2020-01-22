@@ -45,6 +45,17 @@
                     }
                 }
             };
+            
+            scope.checklist = function(index){
+            	for(var i = 0; i <= scope.definitions.length - 1; i++){
+            		scope.definitions[i].isNPL = false;
+            	}
+            	
+            	scope.definitions.sort(function(a,b) {return a.categoryId - b.categoryId});
+            	for(var i = index; i <= scope.definitions.length - 1; i++){
+            		scope.definitions[i].isNPL = true;
+            	}
+            }
 
 
             scope.submit = function () {

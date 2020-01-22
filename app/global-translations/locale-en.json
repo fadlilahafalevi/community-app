@@ -4268,5 +4268,12 @@
   "label.heading.collectibilityaccount":"Collectibility Account",
   "label.heading.collectibilitycif":"One Obligor",
   "label.heading.reservedamount":"Reserved Amount",
+  
+  "Loan Accrual":"..",
+  "label.heading.isNPL":"is NPL?",
+  "label.input.accruedinterestasset":"Accrued Loan Interest (Asset)",
+  "label.tooltip.accruedinterestasset":"An asset account that is debited when the interest is accrued but unpaid by customer",
+  "label.heading.accruedInterestAsset":"Accrued Loan Interest (Asset)",
+	
   "----End---": "--End of file--- "
 }
