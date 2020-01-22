@@ -98,6 +98,9 @@
                     if (data.accountingMappings.savingsAccrualAccount != undefined) {
                     	scope.formData.savingsAccrualAccountId = data.accountingMappings.savingsAccrualAccount.id;
                     }
+                    if (data.accountingMappings.incomeFromInterestAccrualAccount != undefined) {
+                    	scope.formData.incomeFromInterestAccrualId = data.accountingMappings.incomeFromInterestAccrualAccount.id;
+                    }
 
                     _.each(scope.product.paymentChannelToFundSourceMappings, function (fundSource) {
                         scope.configureFundOptions.push({
