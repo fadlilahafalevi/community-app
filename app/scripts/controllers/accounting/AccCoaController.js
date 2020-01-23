@@ -48,6 +48,8 @@
                 scope.EQUITY = translate.instant('EQUITY') ;
                 scope.INCOME = translate.instant('INCOME') ;
                 scope.EXPENSE = translate.instant('EXPENSE') ;
+                scope.OFFBALANCESHEET_CLAIM = translate.instant('OFF BALANCE SHEET CLAIM');
+                scope.OFFBALANCESHEET_LIABILITY = translate.instant('OFF BALANCE SHEET LIABILITY');
                 scope.Accounting = translate.instant('Accounting') ;
 
                 var assetObject = {id: -1, name: scope.ASSET, parentId: -999, children: []};
@@ -55,8 +57,10 @@
                 var equitiyObject = {id: -3, name: scope.EQUITY, parentId: -999, children: []};
                 var incomeObject = {id: -4, name: scope.INCOME, parentId: -999, children: []};
                 var expenseObject = {id: -5, name: scope.EXPENSE, parentId: -999, children: []};
+                var offBalanceSheetClaimObject = {id: -6, name: scope.OFFBALANCESHEET_CLAIM, parentId: -999, children: []};
+                var offBalanceSheetLiabilityObject = {id: -7, name: scope.OFFBALANCESHEET_LIABILITY, parentId: -999, children: []};
                 var rootObject = {id: -999, name: scope.Accounting, children: []};
-                var rootArray = [rootObject, assetObject, liabilitiesObject, equitiyObject, incomeObject, expenseObject];
+                var rootArray = [rootObject, assetObject, liabilitiesObject, equitiyObject, incomeObject, expenseObject, offBalanceSheetClaimObject, offBalanceSheetLiabilityObject];
 				
                 var idToNodeMap = {};
                 for (var i in rootArray) {
@@ -64,6 +68,8 @@
                 }
 
                 for (i = 0; i < data.length; i++) {
+                	data[i].type.value = data[i].type.value.replace(/_/g, " ");
+                	
                     if (data[i].type.value == "ASSET") {
                         if (data[i].parentId == null)  data[i].parentId = -1;
                     } else if (data[i].type.value == "LIABILITY") {
@@ -74,6 +80,10 @@
                         if (data[i].parentId == null)  data[i].parentId = -4;
                     } else if (data[i].type.value == "EXPENSE") {
                         if (data[i].parentId == null)  data[i].parentId = -5;
+                    } else if (data[i].type.value == "OFF BALANCE SHEET CLAIM") {
+                        if (data[i].parentId == null)  data[i].parentId = -6;
+                    } else if (data[i].type.value == "OFF BALANCE SHEET LIABILITY") {
+                        if (data[i].parentId == null)  data[i].parentId = -7;
                     }
                     delete data[i].disabled;
                     delete data[i].manualEntriesAllowed;
@@ -107,6 +117,9 @@
                 scope.treedata = root;
             });
 			
+            scope.replaceString = function(string) {
+            	return string.replace(/_/g, " ");
+            }
 			
         }
     });
