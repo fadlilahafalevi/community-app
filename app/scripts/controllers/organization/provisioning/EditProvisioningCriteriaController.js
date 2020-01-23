@@ -63,6 +63,11 @@
                 this.formData.criteriaId = scope.criteriaId ;
                 this.formData.criteriaName = scope.criteriaName ;
                 this.formData.loanProducts = scope.selectedloanproducts ;
+                
+                scope.definitions.sort(function(a, b) {
+                    return parseFloat(a.categoryId) - parseFloat(b.categoryId);
+                });
+                
                 this.formData.definitions = scope.definitions;
                 resourceFactory.provisioningcriteria.put({criteriaId: routeParams.criteriaId}, this.formData, function (data) {
                     location.path('/viewprovisioningcriteria/' + data.resourceId);
