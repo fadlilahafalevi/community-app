@@ -50,6 +50,11 @@
                 this.isRequired = true ;
                 this.formData.locale = scope.optlang.code;
                 this.formData.loanProducts = scope.selectedloanproducts ;
+                
+                scope.definitions.sort(function(a, b) {
+                    return parseFloat(a.categoryId) - parseFloat(b.categoryId);
+                });
+                
                 this.formData.definitions = scope.definitions ;
                 resourceFactory.provisioningcriteria.post(this.formData, function (data) {
                     location.path('/viewprovisioningcriteria/' + data.resourceId);
