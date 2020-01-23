@@ -63,6 +63,7 @@
                     daysToInactive: data.daysToInactive,
                     daysToDormancy: data.daysToDormancy,
                     daysToEscheat: data.daysToEscheat,
+                    isMainProduct: data.isMainProduct != undefined ? data.isMainProduct : false,
                     interestCompoundingType: data.interestCompoundingType.id != undefined ? data.interestCompoundingType.id:1
                 }
 
