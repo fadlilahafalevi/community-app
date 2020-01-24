@@ -3989,6 +3989,8 @@
   "label.button.paymenttype": "Add Payment Type",
   "label.input.iscashpayment": "Is Cash Payment?",
   "label.anchor.editpaymenttype": "Edit Payment Type",
+  "label.heading.subgl": "Sub-GL",
+  "label.input.subgl": "Sub-GL",
   "label.externalServices": "External Services Configuration",
   "label.input.alias": "Alias",
   "label.input.country": "Country",
