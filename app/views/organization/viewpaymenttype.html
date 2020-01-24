@@ -33,6 +33,7 @@
                     <tr>
                         <th>{{ 'label.heading.name' | translate }}</th>
                         <th>{{ 'label.heading.description' | translate }}</th>
+                        <th>{{ 'label.heading.subgl' | translate }}</th>
                         <th>{{ 'label.heading.iscashpayment' | translate }}</th>
                         <th>{{ 'label.heading.position' | translate }}</th>
                         <th></th>
@@ -48,8 +49,11 @@
                         <td class="col-md-4">
                             <span>{{paymentType.description}}</span>
                         </td>
+                        <td class="col-md-3">
+                            <span>{{paymentType.subGl}}</span>
+                        </td>
                         <td class="col-md-1">
-                            <span>{{paymentType.isCashPayment}}</span>
+                            <span>{{paymentType.isCashPayment | YesOrNo}}</span>
                         </td>
                         <td class="col-md-1">
                             <span>{{paymentType.position}}</span>
