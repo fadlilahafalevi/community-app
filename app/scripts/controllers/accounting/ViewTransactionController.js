@@ -103,6 +103,9 @@
                 };
             };
 
+            scope.replaceString = function(string) {
+            	return string.replace(/_/g, " ");
+            }
         }
     });
     mifosX.ng.application.controller('ViewTransactionController', ['$scope', '$routeParams', 'ResourceFactory', '$location', '$route', '$uibModal', mifosX.controllers.ViewTransactionController]).run(function ($log) {
