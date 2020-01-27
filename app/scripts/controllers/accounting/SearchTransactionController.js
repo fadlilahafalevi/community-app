@@ -139,6 +139,10 @@
                 scope.isValid = true;
                 scope.path = "#/viewsavingaccount/" + scope.formData.savingsaccountId;
             }
+            
+            scope.replaceString = function(string) {
+            	return string.replace(/_/g, " ");
+            }
         }
     });
     mifosX.ng.application.controller('SearchTransactionController', ['$scope', 'ResourceFactory', 'PaginatorService', 'dateFilter', '$location', mifosX.controllers.SearchTransactionController]).run(function ($log) {
