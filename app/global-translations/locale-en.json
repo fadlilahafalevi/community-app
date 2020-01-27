@@ -3110,7 +3110,7 @@
   "label.input.transfersinsuspense": "Transfer in suspense",
   "label.input.incomefrominterest": "Income from interest",
   "label.input.interest.on.overdrafts": "Overdraft Interest Income",
-  "label.input.incomefrominterestaccrual": "Income from interest accrual",
+  "label.input.incomefrominterestaccrual": "Income from interest accrual reversal",
   "label.input.incomefromfees": "Income from fees",
   "label.input.incomefromcharges": "Income from charge",
   "label.input.recoverypayments": "Income from Recovery Repayments",
