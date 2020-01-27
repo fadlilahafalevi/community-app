@@ -26,6 +26,8 @@
                 scope.expenseAccountOptions = scope.product.accountingMappingOptions.expenseAccountOptions || [];
                 scope.liabilityAccountOptions = data.accountingMappingOptions.liabilityAccountOptions || [];
                 scope.incomeAndLiabilityAccountOptions = scope.incomeAccountOptions.concat(scope.liabilityAccountOptions);
+                scope.offBalanceSheetClaimAccountOptions = data.accountingMappingOptions.offBalanceSheetClaimAccountOptions || [];
+                scope.offBalanceSheetLiabilityAccountOptions = data.accountingMappingOptions.offBalanceSheetLiabilityAccountOptions || [];
                 scope.penaltyOptions = scope.product.penaltyOptions || [];
                 scope.chargeOptions = scope.product.chargeOptions || [];
                 scope.charges = scope.product.charges || [];
@@ -205,6 +207,8 @@
                         scope.formData.receivableFeeAccountId = scope.product.accountingMappings.receivableFeeAccount.id;
                         scope.formData.receivablePenaltyAccountId = scope.product.accountingMappings.receivablePenaltyAccount.id;
                         scope.formData.accruedInterestAssetId = scope.product.accountingMappings.accruedInterestAsset.id;
+                        scope.formData.accruedInterestAdministrativeClaimId = scope.product.accountingMappings.accruedInterestAdministrativeClaim.id;
+                        scope.formData.accruedInterestAdministrativeLiabilityId = scope.product.accountingMappings.accruedInterestAdministrativeLiability.id;
                     }
 
                     _.each(scope.product.paymentChannelToFundSourceMappings, function (fundSource) {
