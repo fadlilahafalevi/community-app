@@ -1110,6 +1110,28 @@
 	        </select>
 	    </div>
 	</div>
+	<hr ng-show="isAccrualAccountingEnabled()">
+	<div class="form-group" ng-show="isAccrualAccountingEnabled()">
+	    <h4>{{"label.heading.administrative" | translate}}</h4>
+	    <label class="control-label col-sm-2">{{ 'label.input.offbalancesheetclaim' | translate }}</label>
+	    <i class="fa fa-question-circle col-sm-1 " uib-tooltip="{{'label.tooltip.offbalancesheetclaim' | translate}}"></i>
+	    <div class="col-sm-3">
+	        <select id="accruedInterestAdministrativeClaimId" ng-model="formData.accruedInterestAdministrativeClaimId"
+	                chosen="offBalanceSheetClaimAccountOptions"
+	                ng-options="offBalanceSheetClaimAccount.id as offBalanceSheetClaimAccount.name for offBalanceSheetClaimAccount in offBalanceSheetClaimAccountOptions"
+	                value="{{offBalanceSheetClaimAccount.id}}">
+	        </select>
+	    </div>
+	    <label class="control-label col-sm-2">{{ 'label.input.offbalancesheetliability' | translate }}</label>
+	    <i class="fa fa-question-circle col-sm-1 " uib-tooltip="{{'label.tooltip.offbalancesheetliability' | translate}}"></i></a>
+	    <div class="col-sm-3">
+	        <select id="accruedInterestAdministrativeLiabilityId" ng-model="formData.accruedInterestAdministrativeLiabilityId"
+	                chosen="offBalanceSheetLiabilityAccountOptions"
+	                ng-options="offBalanceSheetLiabilityAccount.id as offBalanceSheetLiabilityAccount.name for offBalanceSheetLiabilityAccount in offBalanceSheetLiabilityAccountOptions"
+	                value="{{offBalanceSheetLiabilityAccountt.id}}">
+	        </select>
+	    </div>
+	</div>
 	<hr>
 	<h4>{{'label.heading.advancedaccountingrules' | translate}}[<a ng-click="showOrHide(showOrHideValue)">{{showOrHideValue}}</a>]</h4>
 	<div class="col-md-12" ng-show="showOrHideValue == 'hide'">

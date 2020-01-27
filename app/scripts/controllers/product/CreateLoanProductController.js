@@ -42,6 +42,8 @@
                 scope.expenseAccountOptions = scope.product.accountingMappingOptions.expenseAccountOptions || [];
                 scope.liabilityAccountOptions = scope.product.accountingMappingOptions.liabilityAccountOptions || [];
                 scope.incomeAndLiabilityAccountOptions = scope.incomeAccountOptions.concat(scope.liabilityAccountOptions);
+                scope.offBalanceSheetClaimAccountOptions = data.accountingMappingOptions.offBalanceSheetClaimAccountOptions || [];
+                scope.offBalanceSheetLiabilityAccountOptions = data.accountingMappingOptions.offBalanceSheetLiabilityAccountOptions || [];
                 scope.penaltyOptions = scope.product.penaltyOptions || [];
                 scope.chargeOptions = scope.product.chargeOptions || [];
                 scope.overduecharges = [];

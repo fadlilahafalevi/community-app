@@ -4279,6 +4279,13 @@
   "label.input.accruedinterestasset":"Accrued Loan Interest (Asset)",
   "label.tooltip.accruedinterestasset":"An asset account that is debited when the interest is accrued but unpaid by customer",
   "label.heading.accruedInterestAsset":"Accrued Loan Interest (Asset)",
+  "label.heading.administrative":"Administrative",
+  "label.input.offbalancesheetclaim":"Off Balance Sheet Claim",
+  "label.input.offbalancesheetliability":"Off Balance Sheet Liability",
+  "label.tooltip.offbalancesheetclaim":"Off Balance Sheet Claim",
+  "label.tooltip.offbalancesheetliability":"Off Balance Sheet Liability",
+  "label.heading.accruedInterestAdministrativeClaim":"Off Balance Sheet Claim",
+  "label.heading.accruedInterestAdministativeLiability":"Off Balance Sheet Liability",
 	
   "----End---": "--End of file--- "
 }
