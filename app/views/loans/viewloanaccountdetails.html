@@ -675,7 +675,9 @@
                             </thead>
                             <tbody>
                                 <tr class="pointer-main" ng-class="{strikeoff : transaction.manuallyReversed==true}"
-                                    ng-repeat="transaction in loandetails.transactions | orderBy:transactionSort.column:transactionSort.descending" ng-hide = "hideAccrualTransactions && (transaction.type.accrual || transaction.type.accrualAsset) ">
+                                    ng-repeat="transaction in loandetails.transactions | orderBy:transactionSort.column:transactionSort.descending" ng-hide = "hideAccrualTransactions && (transaction.type.accrual 
+                                    || transaction.type.accrualAsset || transaction.type.accrualAdministrative || transaction.type.reverseIncome || transaction.type.reverseAdministrativeRepayment || transaction.type.reverseAccrualAsset
+                                    || transaction.type.reverseAccrualAdministrativeToAsset || transaction.type.reverseAccrualAdministrativeToReceivable)">
                                     <td class="pointer" data-ng-click="routeTo(loandetails.id,transaction.id,transaction.type.id)">
                                         {{transaction.id}}
                                     </td>

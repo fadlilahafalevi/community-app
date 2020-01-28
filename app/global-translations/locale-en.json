@@ -4286,6 +4286,9 @@
   "label.tooltip.offbalancesheetliability":"Off Balance Sheet Liability",
   "label.heading.accruedInterestAdministrativeClaim":"Off Balance Sheet Claim",
   "label.heading.accruedInterestAdministativeLiability":"Off Balance Sheet Liability",
+  "label.heading.accruedReverse":"Accrued Reverse Interest",
+  "label.input.accruedreverse":"Accrued Reverse Interest",
+  "label.tooltip.accruedreverse":"Accrued Reverse Interest",
 	
   "----End---": "--End of file--- "
 }

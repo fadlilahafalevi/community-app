@@ -3251,5 +3251,15 @@
 	"label.heading.isNPL":"is NPL?",
 	"label.input.accruedinterestasset":"Tagihan Bunga dalam Penyelesaian (Aset)",
 	"label.tooltip.accruedinterestasset":"Akun aset yang berisi tagihan bunga yang sudah diakui tetapi belum dibayar.",
-	"label.heading.accruedInterestAsset":"Tagihan Bunga dalam Penyelesaian (Aset)"
+	"label.heading.accruedInterestAsset":"Tagihan Bunga dalam Penyelesaian (Aset)",
+	"label.heading.administrative":"Administrative",
+	"label.input.offbalancesheetclaim":"Off Balance Sheet Claim",
+	"label.input.offbalancesheetliability":"Off Balance Sheet Liability",
+	"label.tooltip.offbalancesheetclaim":"Off Balance Sheet Claim",
+	"label.tooltip.offbalancesheetliability":"Off Balance Sheet Liability",
+	"label.heading.accruedInterestAdministrativeClaim":"Off Balance Sheet Claim",
+	"label.heading.accruedInterestAdministativeLiability":"Off Balance Sheet Liability",
+	"label.heading.accruedReverse":"Accrued Reverse Interest",
+	"label.input.accruedreverse":"Accrued Reverse Interest",
+	"label.tooltip.accruedreverse":"Accrued Reverse Interest"
 }
