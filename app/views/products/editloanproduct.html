@@ -1096,6 +1096,18 @@
 	                value="{{expenseAccount.id}}">
 	        </select>
 	    </div>
+	    
+	    <label class="control-label col-sm-2">{{ 'label.input.accruedreverse' | translate }}</label>
+	     <i class="fa fa-question-circle col-sm-1 "
+	        uib-tooltip="{{'label.tooltip.accruedreverse' | translate}}"></i>
+	
+	     <div class="col-sm-3">
+	         <select id="accruedReverseId" ng-model="formData.accruedReverseId"
+	                 chosen="expenseAccountOptions"
+	                 ng-options="expenseAccount.id as expenseAccount.name for expenseAccount in expenseAccountOptions"
+	                 value="{{expenseAccount.id}}">
+	         </select>
+	     </div>
 	</div>
 	<hr>
 	<div class="form-group">

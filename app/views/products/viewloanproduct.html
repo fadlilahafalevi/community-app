@@ -482,6 +482,10 @@
                 <td>{{'label.heading.accruedInterestAdministativeLiability' | translate}}:</td>
                 <td colspan="3">{{loanproduct.accountingMappings.accruedInterestAdministrativeLiability.name}}</td>
             </tr>
+            <tr ng-show="isAccrualAccountingEnabled">
+                <td>{{'label.heading.accruedReverse' | translate}}:</td>
+                <td colspan="3">{{loanproduct.accountingMappings.accruedReverse.name}}</td>
+            </tr>
             <tr>
                 <td>{{'label.heading.transfersinsuspenpense' | translate}}:</td>
                 <td colspan="3">{{loanproduct.accountingMappings.transfersInSuspenseAccount.name}}</td>

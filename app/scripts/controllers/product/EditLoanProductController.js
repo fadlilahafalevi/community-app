@@ -209,6 +209,7 @@
                         scope.formData.accruedInterestAssetId = scope.product.accountingMappings.accruedInterestAsset.id;
                         scope.formData.accruedInterestAdministrativeClaimId = scope.product.accountingMappings.accruedInterestAdministrativeClaim.id;
                         scope.formData.accruedInterestAdministrativeLiabilityId = scope.product.accountingMappings.accruedInterestAdministrativeLiability.id;
+                        scope.formData.accruedReverseId = scope.product.accountingMappings.accruedReverse.id;
                     }
 
                     _.each(scope.product.paymentChannelToFundSourceMappings, function (fundSource) {
