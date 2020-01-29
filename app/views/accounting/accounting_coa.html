@@ -35,7 +35,7 @@
                     <tr class="pointer-main" dir-paginate="coadata in coadatas | orderBy:['type.value','glCode']| SearchFilter:filterText |  itemsPerPage: ChartsPerPage">
                         <td class="pointer" data-ng-click="routeTo(coadata.id)">{{coadata.name}}</td>
                         <td class="pointer" data-ng-click="routeTo(coadata.id)">{{coadata.glCode}}</td>
-                        <td class="pointer" data-ng-click="routeTo(coadata.id)">{{coadata.type.value}}</td>
+                        <td class="pointer" data-ng-click="routeTo(coadata.id)">{{replaceString(coadata.type.value)}}</td>
                         <td class="pointer" data-ng-click="routeTo(coadata.id)">{{coadata.disabled}}</td>
                         <td class="pointer" data-ng-click="routeTo(coadata.id)">{{coadata.manualEntriesAllowed}}</td>
                         <td class="pointer" data-ng-click="routeTo(coadata.id)">{{coadata.usage.value}}</td>
@@ -53,7 +53,7 @@
                             </tr>
                             <tr>
                                 <td>{{ 'label.heading.acctype' | translate }}</td>
-                                <td ng-repeat="coadata in coadatas" ng-show="coadata.id ==  $root.tempNodeID">{{coadata.type.value}}</td>
+                                <td ng-repeat="coadata in coadatas" ng-show="coadata.id ==  $root.tempNodeID">{{replaceString(coadata.type.value)}}</td>
                             </tr>
                             <tr>
                                 <td>{{ 'label.heading.accountusage' | translate }}</td>

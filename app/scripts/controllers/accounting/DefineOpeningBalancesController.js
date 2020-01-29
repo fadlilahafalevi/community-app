@@ -107,7 +107,21 @@
                     scope.updateDebitCreditAmounts(gl);
                     scope.allGls.push(gl);
                 });
+                
+                _.each(scope.data.offBalanceSheetClaimAccountOpeningBalances, function(gl){
+                    scope.updateDebitCreditAmounts(gl);
+                    scope.allGls.push(gl);
+                });
+                
+                _.each(scope.data.offBalanceSheetLiabilityAccountOpeningBalances, function(gl){
+                    scope.updateDebitCreditAmounts(gl);
+                    scope.allGls.push(gl);
+                });
 
+            }
+            
+            scope.replaceString = function(string) {
+            	return string.replace(/_/g, " ");
             }
 
             scope.retrieveOpeningBalances = function (officeId, currencyCode) {

@@ -3225,6 +3225,8 @@
 	"label.heading.iscashpayment": "apakah pembayaran tunai?",
 	"label.button.paymenttype": "Tambahkan jenis pembayaran",
 	"label.input.iscashpayment": "apakah pembayaran tunai?",
+	"label.heading.subgl": "Sub-GL",
+	"label.input.subgl": "Sub-GL",
 	"label.anchor.editpaymenttype": "perbaiki jenis pembayaran",
 	"label.SMTP.description": "konfigurasi servis email",
 	"label.anchor.editExternalServicesConfiguration": "perbaiki servis konfigurasi servis",
