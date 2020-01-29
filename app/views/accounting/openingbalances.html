@@ -68,7 +68,7 @@
                     <tr ng-repeat="gl in allGls">
                         <td>
                             <span ng-show="allGls[$index].glAccountType.value != allGls[$index-1].glAccountType.value">
-                            {{gl.glAccountType.value}}
+                            {{replaceString(gl.glAccountType.value)}}
                             </span>
                         </td>
                         <td>{{gl.glAccountCode}}</td>

@@ -1115,6 +1115,8 @@
   "accountType.equity": "Equity",
   "accountType.income": "Income",
   "accountType.expense": "Expenses",
+  "accountType.offBalanceSheetClaim":"Off Balance Sheet Claim",
+  "accountType.offBalanceSheetLiability":"Off Balance Sheet Liability",
   "accountUsage.detail": "Detail",
   "accountUsage.header": "Header",
   "validation.msg.accounttransfer.fromOfficeId.cannot.be.blank": "From office is mandatory.",
