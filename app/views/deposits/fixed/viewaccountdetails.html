@@ -242,7 +242,15 @@
                                 </tr>
                             </table>
                             <table class="table table-bordered view-table" ng-if="savingaccountdetails.status.rejected || savingaccountdetails.status.submittedAndPendingApproval">
-                                <tr>
+			                    <tr>
+			                        <th class="active fontnormal col-md-3">{{'label.heading.interestcompoundingtype' |
+			                            translate}}
+			                        </th>
+			                        <td class="col-md-3"><span
+			                                class="padded-td">{{savingaccountdetails.interestCompoundingType.value}}</span>
+			                        </td>
+			                    </tr>
+			                    <tr ng-show="savingaccountdetails.interestCompoundingType.id == 1">
                                     <td class="active fontnormal col-md-3">{{'label.interestcompoundingperiod' |
                                         translate}}
                                     </td>
