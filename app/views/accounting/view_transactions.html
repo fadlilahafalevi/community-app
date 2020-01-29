@@ -172,7 +172,7 @@
                             <tbody>
                             <tr class="pointer-main" ng-repeat="transaction in transactions">
                                 <td class="pointer" data-ng-click="showTransaction(transaction)">{{transaction.id}}</td>
-                                <td class="pointer" data-ng-click="showTransaction(transaction)">{{transaction.glAccountType.value}}</td>
+                                <td class="pointer" data-ng-click="showTransaction(transaction)">{{replaceString(transaction.glAccountType.value)}}</td>
                                 <td class="pointer" data-ng-click="showTransaction(transaction)">{{transaction.glAccountName}}({{transaction.glAccountCode}})</td>
                                 <td class="pointer" data-ng-click="showTransaction(transaction)">
                                     <div ng-show="transaction.entryType.value == 'DEBIT'">

@@ -57,6 +57,12 @@
                 } else if (scope.formData.type == 5) {
                     scope.types = scope.coadata.allowedExpensesTagOptions;
                     scope.headerTypes = scope.coadata.expenseHeaderAccountOptions;
+                } else if (scope.formData.type == 6) {
+                    scope.types = scope.coadata.allowedOffBalanceSheetClaimTagOptions;
+                    scope.headerTypes = scope.coadata.offBalanceSheetClaimHeaderAccountOptions;
+                } else if (scope.formData.type == 7) {
+                    scope.types = scope.coadata.allowedOffBalanceSheetLiabilityTagOptions;
+                    scope.headerTypes = scope.coadata.offBalanceSheetLiabilityHeaderAccountOptions;
                 }
             } ;
 

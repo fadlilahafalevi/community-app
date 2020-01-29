@@ -6,6 +6,7 @@
                 scope.formData = {
                     name: data.name,
                     description: data.description,
+                    subGl: data.subGl,
                     isCashPayment: data.isCashPayment,
                     position : data.position
                 };
