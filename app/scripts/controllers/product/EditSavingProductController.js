@@ -90,6 +90,9 @@
                 scope.formData.writeOffAccountId = data.accountingMappings.writeOffAccount.id;
                 scope.formData.overdraftPortfolioControlId = data.accountingMappings.overdraftPortfolioControl.id;
                 scope.formData.incomeFromInterestId = data.accountingMappings.incomeFromInterest.id;
+                if (data.accountingMappings.incomeFromInterestAccrualAccount != undefined) {
+                	scope.formData.incomeFromInterestAccrualId = data.accountingMappings.incomeFromInterestAccrualAccount.id;
+                }
 
                 _.each(scope.product.paymentChannelToFundSourceMappings, function (fundSource) {
                     scope.configureFundOptions.push({

@@ -604,6 +604,20 @@
                                 </select>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">{{ 'label.input.incomefrominterestaccrual' | translate
+                                }}</label>
+                            <i class="fa fa-question-circle col-sm-1 "
+                               uib-tooltip="{{'label.tooltip.incomefromoverdraftinterest' | translate}}"></i>
+                            <div class="col-sm-3">
+                                <select id="incomeFromInterestAccrualId" ng-model="formData.incomeFromInterestAccrualId"
+                                        chosen="incomeAccountOptions"
+                                        ng-options="incomeAccount.id as incomeAccount.name for incomeAccount in incomeAccountOptions"
+                                        ng-change="savingproduct.accountingMappings.incomeFromInterest.name = formValue(incomeAccountOptions,formData.incomeFromInterestId,'id','name')"
+                                        value="{{incomeAccount.id}}">
+                                </select>
+                            </div>
+                        </div>
                         <hr>
                         <h4>{{'label.heading.advancedaccountingrules' | translate}}[<a
                                 ng-click="showOrHide(showOrHideValue)">{{showOrHideValue}}</a>]</h4>
