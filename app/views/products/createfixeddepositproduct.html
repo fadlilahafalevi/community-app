@@ -633,6 +633,17 @@
 	                                    value="{{liabilityAccount.id}}">
 	                            </select>
 	                        </div>
+	                        <label class="control-label col-sm-2">{{ 'label.input.savingtax' | translate }}</label>
+	                        <i class="fa fa-question-circle col-sm-1 "
+	                           uib-tooltip="{{'label.tooltip.savingcontrol' | translate}}"></i>
+	                        <div class="col-sm-3">
+	                            <select id="savingsTaxAccountId" ng-model="formData.savingsTaxAccountId"
+	                                    chosen="liabilityAccountOptions"
+	                                    ng-options="liabilityAccount.id as liabilityAccount.name for liabilityAccount in liabilityAccountOptions"
+	                                    ng-change="savingproduct.accountingMappings.savingsAccrualAccount.name = formValue(liabilityAccountOptions,formData.savingsAccrualAccountId,'id','name')"
+	                                    value="{{liabilityAccount.id}}">
+	                            </select>
+	                        </div>
                         </div>
                         <hr>
                         <div class="form-group">
