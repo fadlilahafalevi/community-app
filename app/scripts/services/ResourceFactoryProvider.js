@@ -698,6 +698,11 @@
                     twoFactorConfigResource: defineResource(apiVer+"/twofactor/configure", {}, {
                         getAllConfigs: {method: 'GET', params: {}},
                         put: {method: 'PUT', params: {}}
+                    }),
+                    notificationsResource: defineResource(apiVer + "/notifications", {},{
+                        getAllNotifications: {method: 'GET', params: {isRead: true, sqlSearch: '@sqlSearch'}},
+                        getAllUnreadNotifications: {method: 'GET', params: {isRead: false, sqlSearch: '@sqlSearch'}},
+                        update: {method: 'PUT', params:{}}
                     })
                 };
             }];

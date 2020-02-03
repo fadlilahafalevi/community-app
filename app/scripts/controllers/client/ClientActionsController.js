@@ -92,7 +92,9 @@
                     scope.showDateField = true;
                     resourceFactory.clientResource.get({anotherresource: 'template', commandParam: 'close'}, function (data) {
                         scope.reasons = data.narrations;
-                        scope.formData.reasonId = scope.narrations[0].id;
+                        if (scope.narrations){
+                        	scope.formData.reasonId = scope.narrations[0].id;
+                        }
                     });
                     scope.taskPermissionName = 'CLOSE_CLIENT';
                     scope.RequestEntities('m_client','CLOSE');
