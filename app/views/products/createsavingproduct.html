@@ -518,6 +518,19 @@
                                 </select>
                             </div>
                         </div>
+                        <div class="form-group">
+	                        <label class="control-label col-sm-2">{{ 'label.input.savingaccrual' | translate }}</label>
+	                        <i class="fa fa-question-circle col-sm-1 "
+	                           uib-tooltip="{{'label.tooltip.savingcontrol' | translate}}"></i>
+	                        <div class="col-sm-3">
+	                            <select id="savingsAccrualAccountId" ng-model="formData.savingsAccrualAccountId"
+	                                    chosen="liabilityAccountOptions"
+	                                    ng-options="liabilityAccount.id as liabilityAccount.name for liabilityAccount in liabilityAccountOptions"
+	                                    ng-change="savingproduct.accountingMappings.savingsAccrualAccount.name = formValue(liabilityAccountOptions,formData.savingsAccrualAccountId,'id','name')"
+	                                    value="{{liabilityAccount.id}}">
+	                            </select>
+	                        </div>
+                        </div>
                         <div class="form-group" ng-show="formData.isDormancyTrackingActive">
                             <label class="control-label col-sm-2">{{ 'label.input.escheatLiability' | translate
                                 }}</label>
@@ -593,6 +606,20 @@
                                uib-tooltip="{{'label.tooltip.incomefromoverdraftinterest' | translate}}"></i>
                             <div class="col-sm-3">
                                 <select id="incomeFromInterestId" ng-model="formData.incomeFromInterestId"
+                                        chosen="incomeAccountOptions"
+                                        ng-options="incomeAccount.id as incomeAccount.name for incomeAccount in incomeAccountOptions"
+                                        ng-change="savingproduct.accountingMappings.incomeFromInterest.name = formValue(incomeAccountOptions,formData.incomeFromInterestId,'id','name')"
+                                        value="{{incomeAccount.id}}">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">{{ 'label.input.incomefrominterestaccrual' | translate
+                                }}</label>
+                            <i class="fa fa-question-circle col-sm-1 "
+                               uib-tooltip="{{'label.tooltip.incomefromoverdraftinterest' | translate}}"></i>
+                            <div class="col-sm-3">
+                                <select id="incomeFromInterestAccrualId" ng-model="formData.incomeFromInterestAccrualId"
                                         chosen="incomeAccountOptions"
                                         ng-options="incomeAccount.id as incomeAccount.name for incomeAccount in incomeAccountOptions"
                                         ng-change="savingproduct.accountingMappings.incomeFromInterest.name = formValue(incomeAccountOptions,formData.incomeFromInterestId,'id','name')"

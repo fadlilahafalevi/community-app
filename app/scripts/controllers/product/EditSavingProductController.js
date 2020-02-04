@@ -79,6 +79,9 @@
                 scope.formData.overdraftPortfolioControlId = data.accountingMappings.overdraftPortfolioControl.id;
                 scope.formData.savingsControlAccountId = data.accountingMappings.savingsControlAccount.id;
                 scope.formData.transfersInSuspenseAccountId = data.accountingMappings.transfersInSuspenseAccount.id;
+                if (data.accountingMappings.savingsAccrualAccount != undefined) {
+                	scope.formData.savingsAccrualAccountId = data.accountingMappings.savingsAccrualAccount.id;
+                }
                 if (data.accountingMappings.escheatLiabilityAccount != undefined) {
                     scope.formData.escheatLiabilityId = data.accountingMappings.escheatLiabilityAccount.id;
                 }
@@ -88,6 +91,9 @@
                 scope.formData.writeOffAccountId = data.accountingMappings.writeOffAccount.id;
                 scope.formData.overdraftPortfolioControlId = data.accountingMappings.overdraftPortfolioControl.id;
                 scope.formData.incomeFromInterestId = data.accountingMappings.incomeFromInterest.id;
+                if (data.accountingMappings.incomeFromInterestAccrualAccount != undefined) {
+                	scope.formData.incomeFromInterestAccrualId = data.accountingMappings.incomeFromInterestAccrualAccount.id;
+                }
 
                 _.each(scope.product.paymentChannelToFundSourceMappings, function (fundSource) {
                     scope.configureFundOptions.push({
