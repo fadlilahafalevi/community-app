@@ -715,6 +715,7 @@
   "label.lastsummarysavings": "Last savings summary",
   "label.istaxapplicable": "Tax Applicable",
   "label.lastupdatedsummary": "Last updated summary",
+  "label.numofactivesavings": "# of active savings",
   "label.zoom": "Show Larger",
   "label.showClientSignature": "View Client Signature",
   "label.noClientSignature": "Client Signature is not provided",
