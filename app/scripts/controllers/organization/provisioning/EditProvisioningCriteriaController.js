@@ -45,6 +45,17 @@
                     }
                 }
             };
+            
+            scope.checklist = function(index){
+            	for(var i = 0; i <= scope.definitions.length - 1; i++){
+            		scope.definitions[i].isNPL = false;
+            	}
+            	
+            	scope.definitions.sort(function(a,b) {return a.categoryId - b.categoryId});
+            	for(var i = index; i <= scope.definitions.length - 1; i++){
+            		scope.definitions[i].isNPL = true;
+            	}
+            }
 
 
             scope.submit = function () {
@@ -52,6 +63,11 @@
                 this.formData.criteriaId = scope.criteriaId ;
                 this.formData.criteriaName = scope.criteriaName ;
                 this.formData.loanProducts = scope.selectedloanproducts ;
+                
+                scope.definitions.sort(function(a, b) {
+                    return parseFloat(a.categoryId) - parseFloat(b.categoryId);
+                });
+                
                 this.formData.definitions = scope.definitions;
                 resourceFactory.provisioningcriteria.put({criteriaId: routeParams.criteriaId}, this.formData, function (data) {
                     location.path('/viewprovisioningcriteria/' + data.resourceId);

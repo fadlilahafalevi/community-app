@@ -50,6 +50,11 @@
                 this.isRequired = true ;
                 this.formData.locale = scope.optlang.code;
                 this.formData.loanProducts = scope.selectedloanproducts ;
+                
+                scope.definitions.sort(function(a, b) {
+                    return parseFloat(a.categoryId) - parseFloat(b.categoryId);
+                });
+                
                 this.formData.definitions = scope.definitions ;
                 resourceFactory.provisioningcriteria.post(this.formData, function (data) {
                     location.path('/viewprovisioningcriteria/' + data.resourceId);
@@ -64,6 +69,17 @@
 
             scope.doBlur = function(index) {
                 //console.log("Blur") ;
+            }
+            
+            scope.checklist = function(index){
+            	for(var i = 0; i <= scope.definitions.length - 1; i++){
+            		scope.definitions[i].isNPL = false;
+            	}
+            	
+            	scope.definitions.sort(function(a,b) {return a.categoryId - b.categoryId});
+            	for(var i = index; i <= scope.definitions.length - 1; i++){
+            		scope.definitions[i].isNPL = true;
+            	}
             }
         }
     });
