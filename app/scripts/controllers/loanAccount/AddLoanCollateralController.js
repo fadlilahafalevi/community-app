@@ -7,7 +7,9 @@
             scope.loanId = routeParams.id;
             resourceFactory.loanCollateralTemplateResource.get({loanId: scope.loanId}, function (data) {
                 scope.collateralTypes = data.allowedCollateralTypes;
-                scope.formData.collateralTypeId = data.allowedCollateralTypes[0].id;
+                if (data.allowedCollateralTypes.length > 0){
+                	scope.formData.collateralTypeId = data.allowedCollateralTypes[0].id;
+                }
             });
 
             scope.cancel = function () {

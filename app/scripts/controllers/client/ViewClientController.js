@@ -363,7 +363,7 @@
                 };
                 $scope.cancel = function () {
                     $uibModalInstance.dismiss('cancel');
-                    $scope.stream.getVideoTracks()[0].stop();
+                    //$scope.stream.getVideoTracks()[0].stop();
                 };
                 $scope.reset = function () {
                     $scope.picture = null;
@@ -438,7 +438,7 @@
                         for (var i = 0; i < docsData.data.length; ++i) {
                             if (docsData.data[i].name == 'clientSignature') {
                                 $scope.docId = docsData.data[i].id;
-                                scope.signature_url = $rootScope.hostUrl + API_VERSION + '/clients/' + routeParams.id + '/documents/' + docId + '/attachment?tenantIdentifier=' + $rootScope.tenantIdentifier;
+                                scope.signature_url = $rootScope.hostUrl + API_VERSION + '/clients/' + routeParams.id + '/documents/' + $scope.docId + '/attachment?tenantIdentifier=' + $rootScope.tenantIdentifier;
                             }
                         }
                     });
