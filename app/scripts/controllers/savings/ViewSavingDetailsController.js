@@ -6,6 +6,8 @@
             scope.showActiveCharges = true;
             scope.formData = {};
             scope.date = {};
+            scope.date.toDate = new Date();
+            scope.date.fromDate = new Date();
             scope.staffData = {};
             scope.fieldOfficers = [];
             scope.savingaccountdetails = [];
