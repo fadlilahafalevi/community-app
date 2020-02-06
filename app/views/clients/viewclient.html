@@ -658,6 +658,18 @@
 										<th>{{ 'label.numofactivesavings' | translate }}</th>
 										<td><span class="padded-td">{{client.ClientSummary.activeSavings}}</span></td>
 									</tr>
+									<tr>
+										<th class="table-bold">{{ 'label.lastsummarysavings' | translate }}</th>
+										<td><span class="padded-td">{{client.savingsSummaryTaxData.totalBalance | number}}</span></td>
+									</tr>
+									<tr>
+										<th class="table-bold">{{ 'label.istaxapplicable' | translate }}</th>
+										<td><span class="padded-td">{{client.savingsSummaryTaxData.isTaxApplicable}}</span></td>
+									</tr>
+									<tr>
+										<th class="table-bold">{{ 'label.lastupdatedsummary' | translate }}</th>
+										<td><span class="padded-td">{{client.savingsSummaryTaxData.date | DateFormat}}</span></td>
+									</tr>
 								</table>
 							</div>
 						</div>
