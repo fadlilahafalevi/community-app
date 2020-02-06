@@ -20,6 +20,9 @@
             scope.showTrancheAmountTotal = 0;
             scope.processDate = false;
             scope.submittedDatatables = [];
+            scope.formData.transactionDate =  new Date();
+            scope.formData.dueDate = new Date();
+            scope.formData.updatedExpectedDisbursementDate = new Date();
             var submitStatus = [];
 
             rootScope.RequestEntities = function(entity,status,productId){
