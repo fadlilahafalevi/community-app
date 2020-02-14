@@ -73,6 +73,7 @@
                         <th>{{'label.heading.account' | translate}}</th>
                         <th>{{'label.heading.debit' | translate}}</th>
                         <th>{{'label.heading.credit' | translate}}</th>
+                        <th>{{'label.heading.reversed' | translate}}</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -104,6 +105,8 @@
                             <div ng-show="transaction.entryType.value == 'CREDIT'">
                                 {{transaction.currency.displaySymbol}}&nbsp;{{transaction.amount | number}}
                             </div>
+                        </td>
+                        <td class="pointer" data-ng-click="routeTo(transaction.transactionId)">{{transaction.isTransactionReversed}}
                         </td>
                     </tr>
                     </tbody>
