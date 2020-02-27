@@ -4300,6 +4300,8 @@
   "label.heading.accruedReverse":"Accrued Reverse Interest",
   "label.input.accruedreverse":"Accrued Reverse Interest",
   "label.tooltip.accruedreverse":"Accrued Reverse Interest",
+  
+  "validation.msg.savingsproduct.shortName.does.not.match.regexp":"Short Name Product is only numeric",
 	
   "----End---": "--End of file--- "
 }
