@@ -67,11 +67,13 @@
                         <th>{{'label.heading.office' | translate}}</th>
                         <th>{{'label.heading.transactiondate' | translate}}</th>
                         <th>{{'label.heading.transactionid' | translate}}</th>
+                        <th>{{'label.heading.paymenttype' | translate}}</th>
                         <th>{{'label.heading.type' | translate}}</th>
                         <th>{{'label.heading.createdby' | translate}}</th>
                         <th>{{'label.heading.account' | translate}}</th>
                         <th>{{'label.heading.debit' | translate}}</th>
                         <th>{{'label.heading.credit' | translate}}</th>
+                        <th>{{'label.heading.reversed' | translate}}</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -82,6 +84,8 @@
                             DateFormat}}
                         </td>
                         <td class="pointer" data-ng-click="routeTo(transaction.transactionId)">{{transaction.transactionId}}
+                        </td>
+                        <td class="pointer" data-ng-click="routeTo(transaction.transactionId)">{{transaction.paymentTypeValue}}
                         </td>
                         <td class="pointer" data-ng-click="routeTo(transaction.transactionId)">
                             {{replaceString(transaction.glAccountType.value)}}
@@ -101,6 +105,8 @@
                             <div ng-show="transaction.entryType.value == 'CREDIT'">
                                 {{transaction.currency.displaySymbol}}&nbsp;{{transaction.amount | number}}
                             </div>
+                        </td>
+                        <td class="pointer" data-ng-click="routeTo(transaction.transactionId)">{{transaction.isTransactionReversed}}
                         </td>
                     </tr>
                     </tbody>
