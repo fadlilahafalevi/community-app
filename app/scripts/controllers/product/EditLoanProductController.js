@@ -26,8 +26,8 @@
                 scope.expenseAccountOptions = scope.product.accountingMappingOptions.expenseAccountOptions || [];
                 scope.liabilityAccountOptions = data.accountingMappingOptions.liabilityAccountOptions || [];
                 scope.incomeAndLiabilityAccountOptions = scope.incomeAccountOptions.concat(scope.liabilityAccountOptions);
-                scope.offBalanceSheetClaimAccountOptions = data.accountingMappingOptions.offBalanceSheetClaimAccountOptions || [];
-                scope.offBalanceSheetLiabilityAccountOptions = data.accountingMappingOptions.offBalanceSheetLiabilityAccountOptions || [];
+                scope.offBalanceSheetClaimAccountOptions = data.accountingMappingOptions.offBalanceSheetClaimAccountOptions.concat(data.accountingMappingOptions.offBalanceSheetLiabilityAccountOptions) || [];
+                scope.offBalanceSheetLiabilityAccountOptions = data.accountingMappingOptions.offBalanceSheetClaimAccountOptions.concat(data.accountingMappingOptions.offBalanceSheetLiabilityAccountOptions) || [];
                 scope.penaltyOptions = scope.product.penaltyOptions || [];
                 scope.chargeOptions = scope.product.chargeOptions || [];
                 scope.charges = scope.product.charges || [];
