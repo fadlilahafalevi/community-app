@@ -4302,6 +4302,7 @@
   "label.tooltip.accruedreverse":"Accrued Reverse Interest",
   
   "validation.msg.savingsproduct.shortName.does.not.match.regexp":"Short Name Product is only numeric",
+  "error.msg.short.product.name.must.numeric":"Short Name Product is only numeric",
 	
   "----End---": "--End of file--- "
 }
